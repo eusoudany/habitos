@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #09090a;
+  color: white;
+
+  height: 100vh;
+}
+
+header {
+  display: flex;/*colocou o botão na parte superior e na mesma linha do h1*/
+  align-items: center;
+  justify-content: space-between;/*justificar o conteudo organizando espaço entre eles*/
+
+  padding: 48px;/*preenchimento interno de um valor coloa para todos os lados*/
+
+  position: fixed;
+  width: 100%;
+}
+
+button {
+  padding: 16px 24px;/*1 cima e baixo 2 esquerda direita*/
+  border-radius: 8px;
+  border: 1px solid #8b5cf6;
+  background-color: transparent;
+  color: white;
+
+  display: flex;/*por padrão deixa na mesma linha o botão com o h1, colocando flex, pula para linha de baixo, corrigiou usando o header*/
+  align-items: center;/*para deixar o sinal de mais alinhado com a palavra, essa opção só existe qdo tem o display flex*/
+  gap: 12px;/**espaço entre os elementos do botão*/
+
+  font-family: 'Inter';/*fonte importada do google*/
+  font-weight: 600;/*peso da fonte*/
+  font-size: 16px;
+  line-height: 125%;
+}
+
+#form-habits {
+  display: flex;
+
+  padding: 200px 48px 48px;/*cima, laterias, baixo*/
+
+  width: fit-content; /*encaixe o conteudo na largura*/
+}
+
+.habits {/*nome e emoji*/
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+
+  gap: 24px;
+}
+
+.habit {
+  width: 64x;
+  height: 64px;
+
+  font-size: 20px;
+  font-family: 'Roboto Mono';
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.days {
+  display: flex;
+  gap: 48px;
+  margin-left: 32px;
+}
+
+.day {
+  display: flex;
+  flex-direction: column; /*direção do flex um abaixo do outro*/
+  gap: 24px;
+}
+
+.day div {
+  margin-bottom: 8px;
+
+  font-family: 'Roboto Mono';
+  font-size: 20px;
+  line-height: 125%;
+
+  color: #A1A1AA;
+
+  text-align: center;
+}
+
+input {
+  appearance: none;/*tirou a aparencia para que tenha arredondamento da borda*/
+  -webkit-appearance: none;/*para tirar a aprencia em outros navegadores*/
+
+  width: 64px;
+  height: 64px;
+
+  border: 2px solid #27272A;
+  border-radius: 8px;
+
+  background: #18181B;
+}
+
+input:checked { /*pseudo - selector: quando o checked estiver marcado*/
+  background: #8B5CF6;
+  border: 2px solid #A78BFA;
+}
+
+@media (max-width:570px){ /*aplicar esse css para larguras de tela até 570*/
+  button div{ /*div do botão não aparecer*/
+    display:none;
+  }
+
+  }
